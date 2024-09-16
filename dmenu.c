@@ -139,16 +139,17 @@ cistrstr(const char *h, const char *n)
 static void
 drawhighlights(struct item *item, int x, int y, int maxw)
 {
-	{	int i, indent;
+	{
+		int i, indent;
 		char *highlight;
 		char c;
-
+	
 		if (!(strlen(item->text) && strlen(text)))
 			return;
-
+	
 		drw_setscheme(drw, scheme[item == sel
-	                   	? SchemeSelHighlight
-	                   	: SchemeNormHighlight]);
+		                   ? SchemeSelHighlight
+		                   : SchemeNormHighlight]);
 		for (i = 0, highlight = item->text; *highlight && text[i];) {
 			if (!fstrncmp(&text[i], highlight, 1)) {
 				c = highlight[1];
@@ -156,7 +157,7 @@ drawhighlights(struct item *item, int x, int y, int maxw)
 	
 				/* get indentation */
 				indent = TEXTW(item->text);
-
+	
 				/* highlight character */
 				drw_text(
 					drw,
@@ -167,10 +168,11 @@ drawhighlights(struct item *item, int x, int y, int maxw)
 				);
 				highlight[1] = c;
 				i++;
-				}
+			}
 			highlight++;
 		}
 	}
+
 	char restorechar, tokens[sizeof text], *highlight,  *token;
 	int indentx, highlightlen;
 
@@ -438,7 +440,7 @@ match(void)
 			matches = lsubstr;
 		matchend = substrend;
 	}
-	curr = matches;
+	curr = sel = matches;
 	calcoffsets();
 }
 
@@ -632,11 +634,8 @@ insert:
 	case XK_KP_Up:
 		if (sel && sel->left && (sel = sel->left)->right == curr) {
 			curr = prev;
-			system("xdotool key KP_Up");
 			calcoffsets();
 		}
-		else if (sel && !sel->left)
-			sel = NULL;
 		break;
 	case XK_Next:
 	case XK_KP_Next:
@@ -674,12 +673,9 @@ insert:
 	case XK_Down:
 	case XK_KP_Down:
 		if (sel && sel->right && (sel = sel->right) == next) {
-			system("xdotool key KP_Down");
 			curr = next;
 			calcoffsets();
 		}
-		else if (!sel && curr)
-			sel = curr;
 		break;
 	case XK_Tab:
 		if (!sel)
