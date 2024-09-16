@@ -11,7 +11,6 @@ dmenu is a dynamic menu for X, originally designed for dwm.
 - [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/)
 - [highlight](https://tools.suckless.org/dmenu/patches/highlight/)
 - [Mouse support](https://tools.suckless.org/dmenu/patches/mouse-support/)
-- [no-default-select](https://tools.suckless.org/dmenu/patches/no-default-select/)
 - [xresources](https://tools.suckless.org/dmenu/patches/xresources/)
 
 ## Installation
