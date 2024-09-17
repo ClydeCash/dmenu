@@ -7,7 +7,7 @@ static unsigned int border_width = 1;
 static int fuzzy  = 1;
 static const char worddelimiters[] = " ";
 static const char *fonts[] = {
-				"monospace:size=10:antialias=true:autohint=true",
+				"monospace:size=10",
 				"Noto Color Emoji:pixelsize=10:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
