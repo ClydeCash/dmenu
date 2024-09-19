@@ -9,9 +9,7 @@ dmenu is a dynamic menu for X, originally designed for dwm.
 - [case-insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive/)
 - [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight/)
 - [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/)
-- [highlight](https://tools.suckless.org/dmenu/patches/highlight/)
 - [Mouse support](https://tools.suckless.org/dmenu/patches/mouse-support/)
-- [xresources](https://tools.suckless.org/dmenu/patches/xresources/)
 
 ## Installation
 
