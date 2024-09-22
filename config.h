@@ -13,9 +13,9 @@ static const char *fonts[] 	         = {
 static const char *prompt                = NULL;
 static const char *colors[SchemeLast][2] = {
 	/*     		 	  fg         bg       */
-	[SchemeNorm] 	      = { "#f0f0f0", "#232323" },
-	[SchemeSel]           = { "#232323", "#9871ff" },
+	[SchemeNorm] 	      = { "#f0f0f0", "#212121" },
+	[SchemeSel]           = { "#212121", "#9871ff" },
 	[SchemeSelHighlight]  = { "#ffff87", "#9871ff" },
-	[SchemeNormHighlight] = { "#ffc222", "#232323" },
-	[SchemeOut]           = { "#f0f0f0", "#232323" },
+	[SchemeNormHighlight] = { "#ffc222", "#212121" },
+	[SchemeOut]           = { "#f0f0f0", "#212121" },
 };
